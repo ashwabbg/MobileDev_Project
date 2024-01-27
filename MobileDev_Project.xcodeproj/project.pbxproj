@@ -17,7 +17,9 @@
 		9583E3C92B5EA64700EB18FE /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583E3C82B5EA64700EB18FE /* ScheduleModel.swift */; };
 		9583E3CB2B5EA6BF00EB18FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583E3CA2B5EA6BF00EB18FE /* NetworkManager.swift */; };
 		9583E3CE2B5EA9F300EB18FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583E3CD2B5EA9F300EB18FE /* HomeView.swift */; };
-		9583E3D02B5EAA4B00EB18FE /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9583E3CF2B5EAA4B00EB18FE /* DayDetailView.swift */; };
+		B30A1A882B65152000A237A3 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A1A872B65152000A237A3 /* EventListView.swift */; };
+		B30A1A8A2B65153800A237A3 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A1A892B65153800A237A3 /* EventDetailView.swift */; };
+		B33EB6DF2B65224800EF949D /* Ressources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33EB6DE2B65224800EF949D /* Ressources.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,9 @@
 		9583E3C82B5EA64700EB18FE /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		9583E3CA2B5EA6BF00EB18FE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9583E3CD2B5EA9F300EB18FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		9583E3CF2B5EAA4B00EB18FE /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
+		B30A1A872B65152000A237A3 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		B30A1A892B65153800A237A3 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		B33EB6DE2B65224800EF949D /* Ressources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Ressources.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		9583E3912B5EA4F600EB18FE = {
 			isa = PBXGroup;
 			children = (
+				B33EB6DE2B65224800EF949D /* Ressources.xcassets */,
 				9583E39C2B5EA4F600EB18FE /* MobileDev_Project */,
 				9583E3AE2B5EA4F700EB18FE /* MobileDev_ProjectTests */,
 				9583E3B82B5EA4F700EB18FE /* MobileDev_ProjectUITests */,
@@ -110,8 +115,9 @@
 				9583E3A32B5EA4F700EB18FE /* MobileDev_Project.entitlements */,
 				9583E3CA2B5EA6BF00EB18FE /* NetworkManager.swift */,
 				9583E3CD2B5EA9F300EB18FE /* HomeView.swift */,
+				B30A1A872B65152000A237A3 /* EventListView.swift */,
+				B30A1A892B65153800A237A3 /* EventDetailView.swift */,
 				9583E3A42B5EA4F700EB18FE /* Preview Content */,
-				9583E3CF2B5EAA4B00EB18FE /* DayDetailView.swift */,
 			);
 			path = MobileDev_Project;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 			files = (
 				9583E3A62B5EA4F700EB18FE /* Preview Assets.xcassets in Resources */,
 				9583E3A22B5EA4F700EB18FE /* Assets.xcassets in Resources */,
+				B33EB6DF2B65224800EF949D /* Ressources.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9583E3D02B5EAA4B00EB18FE /* DayDetailView.swift in Sources */,
+				B30A1A8A2B65153800A237A3 /* EventDetailView.swift in Sources */,
 				9583E3CB2B5EA6BF00EB18FE /* NetworkManager.swift in Sources */,
 				9583E3C92B5EA64700EB18FE /* ScheduleModel.swift in Sources */,
+				B30A1A882B65152000A237A3 /* EventListView.swift in Sources */,
 				9583E3A02B5EA4F600EB18FE /* ContentView.swift in Sources */,
 				9583E3CE2B5EA9F300EB18FE /* HomeView.swift in Sources */,
 				9583E39E2B5EA4F600EB18FE /* MobileDev_ProjectApp.swift in Sources */,

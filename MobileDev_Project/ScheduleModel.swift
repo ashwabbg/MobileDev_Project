@@ -32,10 +32,17 @@ extension Date {
     static func fromISOString(_ dateString: String) -> String {
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions.insert(.withFractionalSeconds)
-        let startDate = formatter.date(from: dateString)
+        let date = formatter.date(from: dateString)
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM d, yyyy 'at' h:mm a" // Customize the date format as needed
-        return dateFormatter.string(from: startDate!)
+        dateFormatter.dateFormat = "yyyy/MM/dd 'at' HH:mm a" // Customize the date format as needed
+        return dateFormatter.string(from: date!)
+    }
+    
+    static func fromString2Date(_ dateString: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date = dateFormatter.date(from: dateString)
+        return date!
     }
 }

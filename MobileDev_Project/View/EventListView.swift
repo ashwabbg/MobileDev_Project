@@ -1,5 +1,6 @@
 import SwiftUI
 
+// Event list component
 struct EventListView: View {
     var events: [Event]
     

@@ -1,5 +1,6 @@
 import SwiftUI
 
+// App Home Page
 struct HomeView: View {
     @State private var events: [Event] = []
     
@@ -42,11 +43,12 @@ struct HomeView: View {
             }
             .onAppear {
                 // Fetch events when the view appears
-                RequestFactory.shared.getFurnitureList { fetchedEvents, error in
+                RequestFactory.shared.getEventList { (fetchedEvents: [Event]?, error: String?) in
                     if let fetchedEvents = fetchedEvents {
                         events = fetchedEvents
                     } else {
-                        // Handle errors
+                        // Handle errors here
+                        print("An error occured: ", error!)
                     }
                 }
             }

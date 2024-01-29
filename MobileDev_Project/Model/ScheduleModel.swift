@@ -1,6 +1,6 @@
 import Foundation
 
-struct Fields: Codable {
+struct ScheduleFields: Codable {
     var start: String
     let location: String
     let notes: String?
@@ -19,16 +19,20 @@ struct Fields: Codable {
     }
 }
 
-enum ActivityType: String, CaseIterable {
-    case meal = "Meal"
-    case networking = "Networking"
-    case keynote = "Keynote"
-    case panel = "Panel"
-    case workshop = "Workshop"
-    case breakoutSession = "Breakout session"
+struct RecordEvent : Codable{
+    var records : [Event]
 }
 
+struct Event : Codable, Identifiable{
+    var id : String
+    var createdTime: String
+    var fields : ScheduleFields
+}
+
+// Class used to manipulate date strings
 extension Date {
+    
+    // Converts ISO format strings into a more readable format
     static func fromISOString(_ dateString: String) -> String {
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions.insert(.withFractionalSeconds)
@@ -39,6 +43,7 @@ extension Date {
         return dateFormatter.string(from: date!)
     }
     
+    // Convert String to Date object
     static func fromString2Date(_ dateString: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"

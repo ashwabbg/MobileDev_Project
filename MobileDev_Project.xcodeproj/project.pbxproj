@@ -20,6 +20,7 @@
 		B30A1A882B65152000A237A3 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A1A872B65152000A237A3 /* EventListView.swift */; };
 		B30A1A8A2B65153800A237A3 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A1A892B65153800A237A3 /* EventDetailView.swift */; };
 		B33EB6DF2B65224800EF949D /* Ressources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33EB6DE2B65224800EF949D /* Ressources.xcassets */; };
+		B34AADF32B67E8D0001A5899 /* SpeakersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34AADF22B67E8D0001A5899 /* SpeakersModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B30A1A872B65152000A237A3 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		B30A1A892B65153800A237A3 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		B33EB6DE2B65224800EF949D /* Ressources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Ressources.xcassets; sourceTree = "<group>"; };
+		B34AADF22B67E8D0001A5899 /* SpeakersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,15 +110,13 @@
 		9583E39C2B5EA4F600EB18FE /* MobileDev_Project */ = {
 			isa = PBXGroup;
 			children = (
-				9583E3C82B5EA64700EB18FE /* ScheduleModel.swift */,
+				B34AADF12B67E80E001A5899 /* Controller */,
+				B34AADF02B67E79F001A5899 /* View */,
+				B34AADEF2B67E785001A5899 /* Model */,
 				9583E39D2B5EA4F600EB18FE /* MobileDev_ProjectApp.swift */,
 				9583E39F2B5EA4F600EB18FE /* ContentView.swift */,
 				9583E3A12B5EA4F700EB18FE /* Assets.xcassets */,
 				9583E3A32B5EA4F700EB18FE /* MobileDev_Project.entitlements */,
-				9583E3CA2B5EA6BF00EB18FE /* NetworkManager.swift */,
-				9583E3CD2B5EA9F300EB18FE /* HomeView.swift */,
-				B30A1A872B65152000A237A3 /* EventListView.swift */,
-				B30A1A892B65153800A237A3 /* EventDetailView.swift */,
 				9583E3A42B5EA4F700EB18FE /* Preview Content */,
 			);
 			path = MobileDev_Project;
@@ -145,6 +145,33 @@
 				9583E3BB2B5EA4F700EB18FE /* MobileDev_ProjectUITestsLaunchTests.swift */,
 			);
 			path = MobileDev_ProjectUITests;
+			sourceTree = "<group>";
+		};
+		B34AADEF2B67E785001A5899 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9583E3C82B5EA64700EB18FE /* ScheduleModel.swift */,
+				B34AADF22B67E8D0001A5899 /* SpeakersModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B34AADF02B67E79F001A5899 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9583E3CD2B5EA9F300EB18FE /* HomeView.swift */,
+				B30A1A872B65152000A237A3 /* EventListView.swift */,
+				B30A1A892B65153800A237A3 /* EventDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B34AADF12B67E80E001A5899 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9583E3CA2B5EA6BF00EB18FE /* NetworkManager.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +310,7 @@
 				9583E3C92B5EA64700EB18FE /* ScheduleModel.swift in Sources */,
 				B30A1A882B65152000A237A3 /* EventListView.swift in Sources */,
 				9583E3A02B5EA4F600EB18FE /* ContentView.swift in Sources */,
+				B34AADF32B67E8D0001A5899 /* SpeakersModel.swift in Sources */,
 				9583E3CE2B5EA9F300EB18FE /* HomeView.swift in Sources */,
 				9583E39E2B5EA4F600EB18FE /* MobileDev_ProjectApp.swift in Sources */,
 			);

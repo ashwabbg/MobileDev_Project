@@ -2,6 +2,7 @@ import SwiftUI
 
 struct EventDetailView: View {
     var event: Event
+    @State private var speakers: [Speaker] = []
     
     private func eventImage(for eventType: String) -> some View {
         let imageName: String
@@ -67,24 +68,30 @@ struct EventDetailView: View {
                 }
             }
             
-            if let speakers = event.fields.speakers {
+            if let eventSpeakersIDs = event.fields.speakers {
+                let filteredSpeakers = speakers.filter { eventSpeakersIDs.contains($0.id) }
+                let filteredSpeakersNames = filteredSpeakers.map { $0.fields.name }
                 VStack {
                     HStack {
                         Image(systemName: "person.2")
                         Text("Speakers").bold()
                     }
-                    Text(speakers.joined(separator: ", "))
+                    Text(filteredSpeakersNames.joined(separator: ", "))
                 }
             }
-            
-            
-            
-//            if let speakers = event.fields.speakers {
-//                Text("Notes: \(speakers)")
-//                    .padding()
-//            }
         }
         .padding()
         .navigationTitle("Event Details")
+        .onAppear {
+            // Fetch events when the view appears
+            RequestFactory.shared.getSpeakerList { (fetchedSpeakers: [Speaker]?, error: String?) in
+                if let fetchedSpeakers = fetchedSpeakers {
+                    speakers = fetchedSpeakers
+                } else {
+                    // Handle error
+                    print("An error occured:", error!)
+                }
+            }
+        }
     }
 }
